@@ -1,0 +1,11 @@
+version: "2"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /var/ssl:/etc/nginx/ssl
+    ports:
+      - "80:80"
+      - "443:443"

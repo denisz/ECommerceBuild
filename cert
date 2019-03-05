@@ -1,0 +1,9 @@
+#!/bin/bash
+
+docker run \
+  -v /var/ssl:/var/ssl \
+  -p 80:80 \
+  -e DOMAINS=darkwaters.store,www.darkwaters.store \
+  -e STAGING=0 \
+  --rm \
+  asamoshkin/letsencrypt-certgen issue
